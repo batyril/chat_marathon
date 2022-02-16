@@ -1,0 +1,2 @@
+# Игнорировать все файлы package.json
+/package.json
