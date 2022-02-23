@@ -1,0 +1,275 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+.chat{
+  padding: 10px;
+  border:  1px solid  black;
+  width:320px ;
+
+  margin: 100px auto;
+  .chat-up{
+    display: flex;
+    justify-content: space-between;
+    .settings{
+      cursor: pointer;
+      width: 98px;
+      height: 32px;
+      border:  1px solid  black;
+      display: flex;
+      justify-content: center  ;
+      align-items: center;
+      a{
+        color: black;
+        text-decoration: none;
+      }
+    }
+    .exit{
+      cursor: pointer;
+      width: 66px;
+      height: 32px;
+      border:  1px solid  black;
+      display: flex;
+      justify-content: center  ;
+      align-items: center;}
+  }
+  .chat-main{
+    padding: 5px;
+    margin-top: 10px;
+    width: 299px;
+    height: 437px;
+    overflow: auto;
+    border:  1px solid  black;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end ;
+    .message-me{
+      padding: 5px;
+      margin-top: 5px;
+      color: white;
+      background-color: #40a140;
+      border-radius: 10px 10px 0 10px;
+      min-width: 34px;
+      max-width: 288px;
+      display: flex;
+      flex-direction: column;
+      .message-time{
+        align-self: flex-end;
+        color: rgba(255, 255, 255, 0.67);
+        font-size: 12px;
+      }
+    }
+    .message-friend{
+      padding: 5px;
+      margin-top: 5px;
+      color: white;
+      background-color: #f08b10;
+      border-radius: 10px 10px 10px 0;
+      min-width: 34px;
+      max-width: 288px;
+      display: flex;
+      flex-direction: column;
+      align-self: flex-start;
+      .message-time{
+        align-self: flex-start;
+        color: rgba(255, 255, 255, 0.67);
+        font-size: 12px;
+      }
+    }
+  }
+  .chat-bottom{
+    margin-top: 10px;
+    form{
+      display: flex;
+      justify-content: space-between;
+      .bottom-text{
+        padding-left: 10px;
+        width: 255px;
+        height: 32px;}
+      .bottom-button{
+        height: 32px;
+        width: 32px ;
+      }
+    }
+  }
+}
+
+.popup{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.81);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  .popup-body{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    .popup-content{
+      background-color: white;
+      width: 273px;
+      height: 318px;
+      padding: 20px;
+      position: relative;
+      .popup-close{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      .popup-title{
+        font-size: 25px;
+        margin-bottom: 15px;
+      }
+      .popup-text{
+        .popup-input{
+          margin-top: 10px;
+          width: 235px;
+          height: 32px;
+          padding-left: 10px;
+        }
+        .popup-button{
+          margin-top:15px;
+          margin-left: 70px;
+          width: 100px;
+          height: 32px;
+          border-radius: 10px;
+          background-color: #40a140;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+
+      }
+    }
+  }
+}
+.popup:target{
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup_authorization{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.81);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  .popup-body{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    .popup-content{
+      background-color: white;
+      width: 273px;
+      height: 318px;
+      padding: 20px;
+      position: relative;
+      .popup-close-authorization{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      .popup-title{
+        font-size: 25px;
+        margin-bottom: 15px;
+      }
+      .popup-text{
+        .popup-input{
+          margin-top: 10px;
+          width: 235px;
+          height: 32px;
+          padding-left: 10px;
+
+        }
+        .popup-button-authorization{
+          margin-top:15px;
+          margin-left: 50px;
+          width: 125px;
+          height: 35px;
+          border-radius: 10px;
+          background-color: #40a140;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+
+      }
+    }
+  }
+}
+
+.popup_validation{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.81);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  .popup-body{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    .popup-content{
+      background-color: white;
+      width: 273px;
+      height: 318px;
+      padding: 20px;
+      position: relative;
+      .popup-close-validation{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      .popup-title{
+        font-size: 25px;
+        margin-bottom: 15px;
+      }
+      .popup-text{
+        .popup-input{
+          margin-top: 10px;
+          width: 235px;
+          height: 32px;
+          padding-left: 10px;
+
+        }
+        .popup-button{
+          margin-top:15px;
+          margin-left: 50px;
+          width: 125px;
+          height: 35px;
+          border-radius: 10px;
+          background-color: #40a140;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+
+      }
+    }
+  }
+}

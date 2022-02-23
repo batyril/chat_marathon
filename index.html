@@ -1,10 +1,111 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang = "ru">
 <head>
     <meta charset = "UTF-8">
     <title>chat</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script  defer type="module" src="js/main.js"></script>
+
 </head>
 <body>
+
+<section class="chat">
+
+    <div class="chat-up">
+        <div  class="settings">
+            <a href="#popup">настройки</a>
+        </div>
+        <div class="exit">
+            выйти
+        </div>
+    </div>
+
+    <div class="chat-main">
+        <div class="message-me">
+            <div class="message-text">Добрый день</div>
+            <div class="message-time">18:45</div>
+        </div>
+
+        <div class="message-friend">
+            <div class="message-text">Добрый день</div>
+            <div class="message-time">18:45</div>
+        </div>
+
+    </div>
+
+    <div class="chat-bottom">
+        <form  class="getMessage" action="#" method="get">
+            <label>
+                <input placeholder ='cообщение..' class="bottom-text" type ='text' name='название' >
+                <input class="bottom-button" value="->" type="submit">
+            </label>
+        </form>
+    </div>
+</section>
+
+<div id="popup" class="popup">
+    <div class="popup-body">
+        <div class="popup-content">
+            <a href="#" class="popup-close">&#215;</a>
+            <div class="popup-title">Настройки</div>
+            <div class="popup-text">
+                <form action="#" method="get">
+                    <label> Имя в чате <br>
+                        <input id="input_settings" placeholder ='имя..' class="popup-input" type ='text'
+                               name='название' >
+                        <input id="button_settings" class="popup-button" value="применить" type="button">
+                    </label>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="popup_authorization" class="popup_authorization">
+    <div class="popup-body">
+        <div class="popup-content">
+            <a href="#" class="popup-close-authorization">&#215;</a>
+            <div class="popup-title">Авторизация</div>
+            <div class="popup-text">
+                <form action="#" method="get">
+                    <label> Почта <br>
+                        <input placeholder ='почта..' class="popup-input" type ='text' name='название' >
+                        <input class="popup-button-authorization" value="получить код" type="button">
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="popup_validation" class="popup_validation">
+    <div class="popup-body">
+        <div class="popup-content">
+            <a href="#" class="popup-close-validation">&#215;</a>
+            <div class="popup-title">Потверждение</div>
+            <div class="popup-text">
+                <form action="#" method="get">
+                    <label> Код <br>
+                        <input placeholder ='код..' id = 'input_validation' class="popup-input" type ='text'
+                               name='название' >
+                        <input id = 'button_validation' class="popup-button" value="войти" type="button">
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<template id="template">
+    <div class="message-me">
+        <div class="message-text">Добрый день</div>
+        <div class="message-time">18:45</div>
+    </div>
+</template>
 
 </body>
 </html>
