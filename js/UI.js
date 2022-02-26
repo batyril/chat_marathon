@@ -4,6 +4,7 @@ export const UI_ELEMENTS = {
     MESSAGE_FORM : document.querySelector('.getMessage'),
     MESSAGE_FORM_TEXT: document.querySelector('.bottom-text'),
     POPUP_AUTHORIZATION: document.querySelector('#popup_authorization'),
+    INPUT_AUTHORIZATION: document.querySelector('#input_authorization'),
     CLOSE_AUTHORIZATION: document.querySelector('.popup-close-authorization'),
     BUTTON_AUTHORIZATION : document.querySelector('.popup-button-authorization'),
     POPUP_VALIDATION : document.querySelector('.popup_validation'),
