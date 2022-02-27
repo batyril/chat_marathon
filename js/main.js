@@ -1,34 +1,28 @@
 import {UI_ELEMENTS} from "./UI.js";
 
-import {getCookie} from "./cookie.js ";
-import {setCookie} from "./cookie.js ";
+import {getCookie} from "./cookie.js";
+import {setCookie} from "./cookie.js";
 import {deleteCookie} from "./cookie.js";
 
 import {setEmail} from "./API.js";
 import {setName} from "./API.js";
 import {getName} from "./API.js";
+import {getMessageAPI} from "./API.js";
+
+import {getTemplateFriend} from "./template.js";
+import {getTemplateMe} from "./template.js";
 
 UI_ELEMENTS.MESSAGE_FORM.addEventListener('submit',getMessage);
 
+//TODO: сделать проверку на пустные сообщения
 function getMessage(){
     event.preventDefault();
     const messageText = UI_ELEMENTS.MESSAGE_FORM_TEXT.value;
     UI_ELEMENTS.MESSAGE_FORM.reset();
-    getTemplate(messageText)
-
-
+    getTemplateMe(messageText);
+    getMessageAPI();
 }
 
-function getTemplate(valueText){
-     // Клонируем содержимое тега <template>
-    const item = UI_ELEMENTS.TEMPLATE.content.cloneNode(true);
-
-    // Находим тег и помещаем текст внутрь
-    item.querySelector('.message-text').textContent = valueText;
-
-    // Вставляем склонированный контент на страницу
-    UI_ELEMENTS.CHAT.prepend(item);
-}
 
 if(!getCookie("token")){
     openPopup('AUTHORIZATION');
@@ -100,4 +94,8 @@ UI_ELEMENTS.BUTTON_SETTINGS.addEventListener('click', function (){
     }
     /*setName(name);*/
    getName()
+})
+
+UI_ELEMENTS.MESSAGE_SEND_BUTTON.addEventListener('click',function (){
+
 })

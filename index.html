@@ -25,14 +25,16 @@
     </div>
 
     <div class="chat-main">
-        <div class="message-me">
-            <div class="message-text">Добрый день</div>
-            <div class="message-time">18:45</div>
+        <div class="message_me">
+            <span class="me_name">Я  </span>
+            <div class="me_text">Добрый день</div>
+            <div class="me_time">18:45</div>
         </div>
 
-        <div class="message-friend">
-            <div class="message-text">Добрый день</div>
-            <div class="message-time">18:45</div>
+        <div class="message_friend">
+            <span class="friend_name">Друг - </span>
+            <div class="friend_text">Добрый день</div>
+            <div class="friend_time">18:45</div>
         </div>
 
     </div>
@@ -41,7 +43,7 @@
         <form  class="getMessage" action="#" method="get">
             <label>
                 <input placeholder ='cообщение..' class="bottom-text" type ='text' name='название' >
-                <input class="bottom-button" value="->" type="submit">
+                <input id="bottom_massage" class="bottom-button" value="->" type="submit">
             </label>
         </form>
     </div>
@@ -101,10 +103,19 @@
     </div>
 </div>
 
-<template id="template">
-    <div class="message-me">
-        <div class="message-text">Добрый день</div>
-        <div class="message-time">18:45</div>
+<template id="template_me">
+    <div class="message_me">
+        <span class="me_name">Я</span>
+        <div class="me_text">Добрый день</div>
+        <div class="me_time">18:45</div>
+    </div>
+</template>
+
+<template id="template_friend">
+    <div class="message_friend">
+        <span class="friend_name">Друг - </span>
+        <div class="friend_text">Добрый день</div>
+        <div class="friend_time">18:45</div>
     </div>
 </template>
 

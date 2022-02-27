@@ -46,7 +46,7 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-end ;
-    .message-me{
+    .message_me{
       padding: 5px;
       margin-top: 5px;
       color: white;
@@ -56,13 +56,13 @@
       max-width: 288px;
       display: flex;
       flex-direction: column;
-      .message-time{
+      .me_time{
         align-self: flex-end;
         color: rgba(255, 255, 255, 0.67);
         font-size: 12px;
       }
     }
-    .message-friend{
+    .message_friend{
       padding: 5px;
       margin-top: 5px;
       color: white;
@@ -73,7 +73,7 @@
       display: flex;
       flex-direction: column;
       align-self: flex-start;
-      .message-time{
+      .friend_time{
         align-self: flex-start;
         color: rgba(255, 255, 255, 0.67);
         font-size: 12px;
